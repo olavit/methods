@@ -2,23 +2,18 @@ package ru.methods;
 
 public class AddMeth {
     public static void main(String[] args) {
-        Vechile minivan = new Vechile();
-        Vechile sportcar = new Vechile();
+        Vechile minivan = new Vechile(7, 16, 21);
+        Vechile sportcar = new Vechile(2, 14, 12);
+        double gallons;
+        int dist = 252;
+        gallons = minivan.fuelneeded(dist);
 
-        int range1, range2;
+        System.out.println("Для преодоления " + dist + " миль мини-фургону требуется " + gallons + " галлонов топлива");
 
-        minivan.passangers = 7;
-        minivan.fuelcap = 16;
-        minivan.mpg = 21;
+        gallons = sportcar.fuelneeded(dist);
 
-        sportcar.passangers = 2;
-        sportcar.fuelcap = 14;
-        sportcar.mpg = 12;
+        System.out.println("Для преодоления " + dist + " миль спорткару требуется " + gallons + " галлонов топлива");
 
-        System.out.println("Минивэн может перевезти " + minivan.passangers + " пассажиров на расстояние " + minivan.range() + " милль.");
-        minivan.range();
 
-        System.out.println("Спорткар может перевезти " + sportcar.passangers + " пассажиров на расстояние " + sportcar.range() + " милль.");
-        sportcar.range();
     }
 }
